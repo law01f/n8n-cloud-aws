@@ -5,6 +5,21 @@ n8n is a very popular workflow automation platform that allows you to
 
 ## Step 1: Create the Free Tier EC2 instance on AWS
 
+1. **Go to your AWS account, then in the EC2 section, create a new  virtual machine by clicking "Launch an instance". Give it the name that you want. Select "Ubuntu" as the OS image. If you want it to be completely free, make sure to select anything Free tier eligible. I found that n8n runs very well on free tier configurations on AWS or Google Cloud.**
+
+   ![n8n-1](https://github.com/user-attachments/assets/ed753513-db72-4f61-abc0-2a4d76db7c8c)
+
+2. **For the instance type, select t2.micro as it is Free tier eligible. For "Key pair", create a new pair or use an existing one accordingly to your security guidelines or policies.**
+
+   ![n8n-2](https://github.com/user-attachments/assets/06600e61-c82b-4f60-aeee-c9c906053b50)
+
+3. **For "Network settings", You can create a new security group ou use an existing one depending on your security guidelines or policies. The most important is that you allow HTTP and HTTPS traffic as this is how your n8n instance will be accessible. Allow also SSH traffic to acess your instance using command line interface. (I recommand for added security change "Anywhere" to "My IP" in order to restrict who could access your instance using SSH. I also recommand that you disable SSH traffic to your instance once you are done with the installation steps.)**
+
+   ![n8n-3](https://github.com/user-attachments/assets/87566f4c-ed36-4f14-bfc4-6aa0a65704ae)
+
+
+4. **For "Configure storage", you can choose anything between 8 to 30 GB
+
 ## Step 2: Run my install script
 
 1. **Download the script:**
