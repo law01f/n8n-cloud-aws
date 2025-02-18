@@ -31,5 +31,5 @@ n8n is a very popular workflow automation platform that allows you to
 7. **Answer this next question however you prefer.**
    ![n8n-9](https://github.com/user-attachments/assets/24b0f04b-b62a-4a65-bf50-72243ab1f900)
 
-8. **If everything went well, you should see something simmilar to this:**
+9. **If everything went well, you should see something simmilar to this:**
    ![n8n-10](https://github.com/user-attachments/assets/a16babfd-a65f-4a13-8754-d02952be324a)
