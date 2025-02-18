@@ -33,6 +33,7 @@ n8n is a very popular workflow automation platform that allows you to
 Now that your brand new virtual machine has been created, you can go to the next step!
 
 ## Step 2: Run my install script
+Before starting Step 2, you **need to have a valid domain or subdomain** that you can use and that you own. You can use a dynamic DNS service as I did for this tutorial. You need to select the public IP of your newly create instance and update the IP address that will be used fo the name resolution. Ok, now you can really go to the next step!
 
 1. **Download the script:**
    ```bash
@@ -72,3 +73,8 @@ Now that your brand new virtual machine has been created, you can go to the next
 9. **If everything went well, you should see something simmilar to this:**
 
    ![n8n-10](https://github.com/user-attachments/assets/a16babfd-a65f-4a13-8754-d02952be324a)
+
+If this last step gives you errors (as it did to me many times), you might have a DNS related issue. Sometimes it can take a few minutes or a few hours for the update of the IP address in your dynamic DNS service to take effect.
+in that case, double check that you have entered the proper IP address and try later using this last command (replace the placeholder by your domain or subdomain name):
+   ```bash
+   sudo certbot --nginx -d MyPlaceholder-DomainOrSubdomain.replaceme.net
