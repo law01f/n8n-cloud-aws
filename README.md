@@ -7,4 +7,4 @@ n8n is a very popular workflow automation platform that allows you to
 
 1. **Download the script:**
    ```bash
-wget https://github.com/Blakkos/n8n-cloud/raw/refs/heads/main/n8n_cloud_install.sh
+   wget https://github.com/Blakkos/n8n-cloud/raw/refs/heads/main/n8n_cloud_install.sh
