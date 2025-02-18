@@ -78,3 +78,9 @@ If this last step gives you errors (as it did to me many times), you might have 
 in that case, double check that you have entered the proper IP address and try later using this last command (replace the placeholder by your domain or subdomain name):
    ```bash
    sudo certbot --nginx -d MyPlaceholder-DomainOrSubdomain.replaceme.net
+```
+
+10. You can now open your browser and go to the URL of your n8n instance https://MyPlaceholder-DomainOrSubdomain.replaceme.net
+   ![n8n-11](https://github.com/user-attachments/assets/35783028-11f0-4914-9bb5-785da10db09e)
+
+    You can now enjoy your n8n instance!
