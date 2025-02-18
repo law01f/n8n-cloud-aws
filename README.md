@@ -3,7 +3,9 @@
 n8n is a very popular workflow automation platform that allows you to 
 
 
-## Step 1: Run my install script
+## Step 1: Create the Free Tier EC2 instance on AWS
+
+## Step 2: Run my install script
 
 1. **Download the script:**
    ```bash
