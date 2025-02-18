@@ -9,7 +9,7 @@ After trying various tutorials, I found a very good one from [futurminds' github
 These instructions were created for an AWS environment and require the use of a DNS or dynamic DNS service. Make sure you have access to both before going further.
 
 ## What you will need:
-1. An AWS account. Feel free to use any other cloud VM service but this tutorial focuses on AWS EC2.
+1. An AWS account. Feel free to use any other cloud VM service but this tutorial focuses on AWS EC2. If you are using another cloud VM service, you can skip to **Step 2** but keep in mind the script is tested on Ubuntu. It should work on other debian based systems but I leave it to you to try it. 
 2. DNS or dynamic DNS service for the domain or subdomain you will assign to the public IP of the VM. I have only tried this with Dynu and NoIP. I also tested with Duck DNS which i usually enjoy but I got a lot of DNS issues after the setup. Use whatever service you prefer, free or not.
 
 ## Step 1: Create the Free Tier EC2 instance on AWS
@@ -22,7 +22,7 @@ These instructions were created for an AWS environment and require the use of a 
 
    ![n8n-2](https://github.com/user-attachments/assets/06600e61-c82b-4f60-aeee-c9c906053b50)
 
-3. For **Network settings**, you can create a new security group ou use an existing one depending on your security guidelines or policies. The most important is that you **allow HTTP and HTTPS traffic** as this is how your n8n instance will be accessible. Allow also **SSH traffic** to access your instance using command line interface. (I recommand for added security change "Anywhere" to "My IP" in order to restrict who could access your instance using SSH. I also recommand that you disable SSH traffic to your instance once you are done with the installation steps.)**
+3. For **Network settings**, you can create a new security group ou use an existing one depending on your security guidelines or policies. The most important is that you **allow HTTP and HTTPS traffic** as this is how your n8n instance will be accessible. Allow also **SSH traffic** to access your instance using command line interface. (I recommand for added security change "Anywhere" to "My IP" in order to restrict who could access your instance using SSH. I also recommand that you disable SSH traffic to your instance once you are done with the installation steps.)
 
    ![n8n-3](https://github.com/user-attachments/assets/87566f4c-ed36-4f14-bfc4-6aa0a65704ae)
 
