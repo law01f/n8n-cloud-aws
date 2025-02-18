@@ -84,3 +84,9 @@ in that case, double check that you have entered the proper IP address and try l
    ![n8n-11](https://github.com/user-attachments/assets/35783028-11f0-4914-9bb5-785da10db09e)
 
     You can now enjoy your n8n instance!
+Your instance should be accessible as soon as the script finished running. In some cases, I have noticed that the URL was not accessible and I had to reboot the instance for everything to work properly.
+Use this to reboot your instance:
+   ```bash
+   sudo reboot
+```
+After rebooting, you should have access to your instance. Make sure the public ip address did not change. You can find it in the EC2 dashboard.
