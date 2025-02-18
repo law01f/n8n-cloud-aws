@@ -38,18 +38,12 @@ Before starting Step 2, you **need to have a valid domain or subdomain** that yo
 1. **Download the script:**
    ```bash
    wget https://github.com/Blakkos/n8n-cloud/raw/refs/heads/main/n8n_cloud_install.sh
-
-
 2. **Modify the execute rights on the file:**
    ```bash
    chmod +x n8n_cloud_install.sh
-
-
 3. **Run the script:**
    ```bash
    ./n8n_cloud_install.sh
-
-
 4. **Enter your domain or subdomain name. I have used a free dynamic DNS service for this test but you can use any other paid service. Once you've entered the domain or subdomain name, press Enter and the script will start running for a few minutes:**
 
    ![n8n-6-1](https://github.com/user-attachments/assets/f0a40a6a-76b9-43fa-a4a0-c0714ead2107)
