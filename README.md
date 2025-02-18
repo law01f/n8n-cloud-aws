@@ -37,7 +37,7 @@ Before starting Step 2, you **need to have a valid domain or subdomain** that yo
 
 1. **Download the script:**
    ```bash
-   wget https://github.com/Blakkos/n8n-cloud/raw/refs/heads/main/n8n_cloud_install.sh
+   wget https://github.com/Blakkos/n8n-cloud-aws/raw/refs/heads/main/n8n_cloud_install.sh
 2. **Modify the execute rights on the file:**
    ```bash
    chmod +x n8n_cloud_install.sh
