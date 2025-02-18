@@ -5,20 +5,32 @@ n8n is a very popular workflow automation platform that allows you to
 
 ## Step 1: Create the Free Tier EC2 instance on AWS
 
-1. **Go to your AWS account, then in the EC2 section, create a new  virtual machine by clicking "Launch an instance". Give it the name that you want. Select "Ubuntu" as the OS image. If you want it to be completely free, make sure to select anything Free tier eligible. I found that n8n runs very well on free tier configurations on AWS or Google Cloud.**
+1. Go to your AWS account, then in the EC2 section, create a new virtual machine by clicking **Launch an instance**. Give it the name that you want. Select **Ubuntu** as the OS image. If you want it to be completely free, make sure to select anything **Free tier eligible**. I found that n8n runs very well on free tier configurations on AWS or Google Cloud.
 
    ![n8n-1](https://github.com/user-attachments/assets/ed753513-db72-4f61-abc0-2a4d76db7c8c)
 
-2. **For the instance type, select t2.micro as it is Free tier eligible. For "Key pair", create a new pair or use an existing one accordingly to your security guidelines or policies.**
+2. For the **Instance type**, select **t2.micro** as it is Free tier eligible. For **Key pair**, create a new pair or use an existing one accordingly to your security guidelines or policies.
 
    ![n8n-2](https://github.com/user-attachments/assets/06600e61-c82b-4f60-aeee-c9c906053b50)
 
-3. **For "Network settings", You can create a new security group ou use an existing one depending on your security guidelines or policies. The most important is that you allow HTTP and HTTPS traffic as this is how your n8n instance will be accessible. Allow also SSH traffic to acess your instance using command line interface. (I recommand for added security change "Anywhere" to "My IP" in order to restrict who could access your instance using SSH. I also recommand that you disable SSH traffic to your instance once you are done with the installation steps.)**
+3. For **Network settings**, you can create a new security group ou use an existing one depending on your security guidelines or policies. The most important is that you **allow HTTP and HTTPS traffic** as this is how your n8n instance will be accessible. Allow also **SSH traffic** to access your instance using command line interface. (I recommand for added security change "Anywhere" to "My IP" in order to restrict who could access your instance using SSH. I also recommand that you disable SSH traffic to your instance once you are done with the installation steps.)**
 
    ![n8n-3](https://github.com/user-attachments/assets/87566f4c-ed36-4f14-bfc4-6aa0a65704ae)
 
 
-4. **For "Configure storage", you can choose anything between 8 to 30 GB
+4. For **Configure storage**, you can choose anything between 8 to 30 GB. In the example I have used 20GB. if you choose anything more than 30GB, your instance won't be considered Free tier eligible.
+
+   ![n8n-4](https://github.com/user-attachments/assets/610f23c6-2364-42eb-bb77-a7faedd52a1d)
+
+5. At the end your summary should look like this. Make sure you see that banner indicating that your instance is Free tier eligible and click **Launch instance** to create and start your instance.
+   
+   ![n8n-5](https://github.com/user-attachments/assets/29f9590d-31e0-4689-a893-a81ea1344732)
+
+6. You should get a message telling you that your virtual machine has been created successfully. click on the instance ID and you will be back to the instance dashboard, select your new instance and click **Connect** to connect to the command line interface of your virtual machine. You will also find instructions to use SSH with the key you have created earlier.
+
+     ![n8n-6](https://github.com/user-attachments/assets/698baf4e-3386-4213-9985-acbdbb572c9b)
+
+Now that your brand new virtual machine has been created, you can go to the next step!
 
 ## Step 2: Run my install script
 
