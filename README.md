@@ -9,7 +9,7 @@ After trying various tutorials, I found a very good one from [futurminds' github
 These instructions were created for an AWS environment and require the use of a DNS or dynamic DNS service. Make sure you have access to both before going further.
 
 ## What you will need:
-1. An AWS account. Feel free to use any other cloud VM service but this tutorial focuses on AWS EC2. If you are using another cloud VM service, you can skip to **Step 2** but keep in mind the script is tested on Ubuntu. It should work on other debian based systems but I leave it to you to try it. 
+1. An AWS account. Feel free to use any other cloud VM service but this tutorial focuses on AWS EC2. If you are using another cloud VM service, you can skip to [**Step 2**](https://github.com/Blakkos/n8n-cloud-aws/tree/main#step-2-run-my-install-script) but keep in mind the script is tested on Ubuntu. It should work on other debian based systems but I leave it to you to try it. 
 2. DNS or dynamic DNS service for the domain or subdomain you will assign to the public IP of the VM. I have only tried this with Dynu and NoIP. I also tested with Duck DNS which i usually enjoy but I got a lot of DNS issues after the setup. Use whatever service you prefer, free or not.
 
 ## Step 1: Create the Free Tier EC2 instance on AWS
