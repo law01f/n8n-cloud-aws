@@ -4,7 +4,7 @@
 It can be used with their subscription model or self-hosted locally or in the cloud.
 The benefit of having n8n self hosted comes not only from the fact that you don't have to pay the monthy fee but also that you won't be limited in the amount of concurent automations.
 
-After trying various tutorials, I found a very good one from blablablablablablablabla and decided to create a script to try to make the installation process even easier.
+After trying various tutorials, I found a very good one from [futurminds' github](https://github.com/futurminds/n8n-self-hosting) and decided to create a script to try to make the installation process even easier.
 
 These instructions were created for an AWS environment and require the use of a DNS or dynamic DNS service. Make sure you have access to both before going further.
 
