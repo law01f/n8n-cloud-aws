@@ -1,7 +1,12 @@
 # Self-Hosting n8n on AWS with SSL 
 
-n8n is a very popular workflow automation platform that allows you to 
+[n8n](https://n8n.io) is a very popular workflow automation platform that allows you to connect various services to automate processes using little to no code.
+It can be used with their subscription model or self-hosted locally or in the cloud.
+The benefit of having n8n self hosted comes not only from the fact that you don't have to pay the monthy fee but also that you won't be limited in the amount of concurent automations.
 
+After trying various tutorials, I found a very good one from blablablablablablablabla and decided to create a script to try to make the installation process even easier.
+
+These instructions were created for an AWS environment and require the use of a DNS or dynamic DNS service. Make sure you have access to both before going further.
 
 ## Step 1: Create the Free Tier EC2 instance on AWS
 
@@ -44,27 +49,27 @@ Before starting Step 2, you **need to have a valid domain or subdomain** that yo
 3. **Run the script:**
    ```bash
    ./n8n_cloud_install.sh
-4. **Enter your domain or subdomain name. I have used a free dynamic DNS service for this test but you can use any other paid service. Once you've entered the domain or subdomain name, press Enter and the script will start running for a few minutes:**
+4. Enter your **domain or subdomain name**. I have used a free dynamic DNS service for this test but you can use any other paid service. Once you've entered the domain or subdomain name, press **Enter** and the script will start running for a few minutes:
 
    ![n8n-6-1](https://github.com/user-attachments/assets/f0a40a6a-76b9-43fa-a4a0-c0714ead2107)
 
 
-5. **Enter a VALID email address. You will be prompted to do so in order to start the registration process for your SSL certificate.**
+5. Enter a **VALID email address**. You will be prompted to do so in order to start the registration process for your SSL certificate.
 
    ![n8n-7](https://github.com/user-attachments/assets/83b8cc10-a394-4188-baf7-6107bbe60863)
 
 
-6. **You have to accept the terms and conditions to go to the next step.**
+6. You have to **accept** the terms and conditions to go to the next step.
 
    ![n8n-8](https://github.com/user-attachments/assets/b8e33549-70e0-4db0-824e-8565338fc864)
 
 
-7. **Answer this next question however you prefer.**
+7. Answer this next question however you prefer.
    
    ![n8n-9](https://github.com/user-attachments/assets/24b0f04b-b62a-4a65-bf50-72243ab1f900)
 
 
-9. **If everything went well, you should see something simmilar to this:**
+9. If everything went well, you should see something simmilar to this:
 
    ![n8n-10](https://github.com/user-attachments/assets/a16babfd-a65f-4a13-8754-d02952be324a)
 
