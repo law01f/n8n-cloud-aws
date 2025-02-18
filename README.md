@@ -1,4 +1,4 @@
-# Self-Hosting n8n on AWS with SSL 
+# Self-Hosting n8n in the cloud with SSL for free
 
 [n8n](https://n8n.io) is a very popular workflow automation platform that allows you to connect various services to automate processes using little to no code.
 It can be used with their subscription model or self-hosted locally or in the cloud.
@@ -77,7 +77,7 @@ Before starting Step 2, you **need to have a valid domain or subdomain** that yo
 
    ![n8n-10](https://github.com/user-attachments/assets/a16babfd-a65f-4a13-8754-d02952be324a)
 
-**IN CASE OF ERROR:** If this last step gives you errors (as it did to me many times), you might have a DNS related issue. Sometimes it can take a few minutes or a few hours for the update of the IP address in your dynamic DNS service to take effect.
+**IN CASE OF AN ERROR:** If this last step gives you errors (as it did to me many times), you might have a DNS related issue. Sometimes it can take a few minutes or a few hours for the update of the IP address in your dynamic DNS service to take effect.
 in that case, double check that you have entered the proper IP address and try later using this last command (replace the placeholder by your domain or subdomain name):
    ```bash
    sudo certbot --nginx -d MyPlaceholder-DomainOrSubdomain.replaceme.net
@@ -90,7 +90,7 @@ in that case, double check that you have entered the proper IP address and try l
 
 
     
-**IN CASE OF ERROR:** Your instance should be accessible as soon as the script finished running. In some cases, I have noticed that the URL was not accessible and I had to reboot the instance for everything to work properly.
+**IN CASE OF AN ERROR:** Your instance should be accessible as soon as the script finished running. In some cases, I have noticed that the URL was not accessible and I had to reboot the instance for everything to work properly.
 Use this to reboot your instance:
    ```bash
    sudo reboot
