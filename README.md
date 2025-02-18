@@ -2,7 +2,7 @@
 
 [n8n](https://n8n.io) is a very popular workflow automation platform that allows you to connect various services to automate processes using little to no code.
 It can be used with their subscription model or self-hosted locally or in the cloud.
-The benefit of having n8n self hosted comes not only from the fact that you don't have to pay the monthy fee but also that you won't be limited in the amount of concurent automations.
+The benefit of having n8n self hosted comes not only from the fact that you don't have to pay the monthy fee but also that you won't be limited with the amount of active workflows.
 
 After trying various tutorials, I found a very good one from [futurminds' github](https://github.com/futurminds/n8n-self-hosting) and decided to create a script to try to make the installation process even easier.
 
