@@ -117,7 +117,7 @@ This update script works if you are using docker and if you have attached a dock
 
 
 
-5. Enter the name of the docker volume mapped to the /home/node/.n8n floder located inside the container. If you have used my install script, it should be "n8n_data". (/!\ IMPORTANT /!\ If you do not have that, please cancel this process with Ctrl+C):
+5. Enter the name of the docker volume mapped to the /home/node/.n8n floder located inside the container. If you have used my install script, it should be "n8n_data". (:warning: IMPORTANT :warning: If you do not have that, please cancel this process with Ctrl+C):
 
 6. Enter your **domain or subdomain name**. This is the domain from the URL you use to access the n8n dashboard (without https://).Once you've entered the domain or subdomain name, press **Enter** and the script will start running for a few minutes:
 
