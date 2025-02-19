@@ -96,3 +96,28 @@ Use this to reboot your instance:
    sudo reboot
 ```
 After rebooting, you should have access to your instance. Make sure the public ip address did not change. You can find it in the EC2 dashboard.
+
+
+## Step 3: Run my update script
+I also created a script to update to the latest version of n8n whenever you see an update notification in the dashboard.
+This update script works if you are using docker and if you have attached a docker volume mapped to the /home/node/.n8n folder inside you n8n container.
+
+1. **Download the script:**
+   ```bash
+   git clone https://github.com/Blakkos/n8n-cloud-aws.git
+   cd n8n-cloud-aws
+2. **Modify the execute rights on the file:**
+   ```bash
+   chmod +x n8n_cloud_update.sh
+3. **Run the script:**
+   ```bash
+   ./n8n_cloud_update.sh
+4. Enter the name of your n8n container. To find it, you can exit with Ctrl+C and type "sudo docker ps" to find out:
+
+
+
+5. Enter the name of the docker volume mapped to the /home/node/.n8n floder located inside the container. If you have used my install script, it should be "n8n_data". (/!\ IMPORTANT /!\ If you do not have that, please cancel this process with Ctrl+C):
+
+6. Enter your **domain or subdomain name**. This is the domain from the URL you use to access the n8n dashboard (without https://).Once you've entered the domain or subdomain name, press **Enter** and the script will start running for a few minutes:
+
+7. Once the update process is over, you will find the backup files of your workflows and credentials in the user home folder. You can also access your n8n dashboard again but this time it will be up-to-date!
