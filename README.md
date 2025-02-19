@@ -1,4 +1,4 @@
-# Self-Hosting n8n in the cloud with SSL for free
+# Self-hosting n8n in the cloud with SSL for free
 
 [n8n](https://n8n.io) is a very popular workflow automation platform that allows you to connect various services to automate processes using little to no code.
 It can be used with their subscription model or self-hosted locally or in the cloud.
