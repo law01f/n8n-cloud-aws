@@ -113,7 +113,7 @@ This update script works if you are using docker and if you have attached a dock
 3. **Run the script:**
    ```bash
    ./n8n_cloud_update.sh
-4. Enter the name of your n8n container. To find it, you can exit with Ctrl+C and type "sudo docker ps" to find out:
+4. Enter the name of your n8n container. To find it, you can exit with Ctrl+C and type "sudo docker ps". (If you used my install script, it will be "n8n".):
    ![n8n-12](https://github.com/user-attachments/assets/718bc97c-3fad-4b48-9320-12ccabcf0c93)
 
 5. Enter the name of the docker volume mapped to the /home/node/.n8n floder located inside the container. If you have used my install script, it should be "n8n_data". (:warning: IMPORTANT :warning: If you do not have that, please cancel this process with Ctrl+C):
