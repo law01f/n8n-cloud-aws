@@ -78,6 +78,7 @@ in that case, double check that you have entered the proper IP address and try l
 ```
 
 7. You can now open your browser and go to the URL of your n8n instance https://MyPlaceholder-DomainOrSubdomain.replaceme.net
+
    ![n8n-11](https://github.com/user-attachments/assets/35783028-11f0-4914-9bb5-785da10db09e)
 
     You can now enjoy your n8n instance!
@@ -100,12 +101,15 @@ This update script works if you are using docker and if you have attached a dock
    ```bash
    bash <(curl -sSL https://github.com/Blakkos/n8n-cloud-aws/raw/refs/heads/main/n8n_cloud_update.sh)
 2. Enter the name of your n8n container. To find it, you can exit with Ctrl+C and type "sudo docker ps". (If you used my install script, it will be "n8n".):
+
    ![n8n-12](https://github.com/user-attachments/assets/718bc97c-3fad-4b48-9320-12ccabcf0c93)
 
 3. Enter the name of the docker volume mapped to the /home/node/.n8n floder located inside the container. If you have used my install script, it should be "n8n_data". (:warning: IMPORTANT :warning: If you do not have that, please cancel this process with Ctrl+C):
+
    ![n8n-13](https://github.com/user-attachments/assets/63571fa3-1424-4d0b-b18a-7051e00aec11)
 
 4. Enter your **domain or subdomain name**. This is the domain from the URL you use to access the n8n dashboard (without https://).Once you've entered the domain or subdomain name, press **Enter** and the script will start running for a few minutes:
+
    ![n8n-14](https://github.com/user-attachments/assets/d6ba7b0f-3708-4aa3-b398-cad4710f8110)
 
 5. Once the update process is over, you will find the backup files of your workflows and credentials in the user home folder. You can also access your n8n dashboard again but this time it will be up-to-date!
