@@ -44,37 +44,30 @@ Now that your brand new virtual machine has been created, you can go to the next
 ## Step 2: Run my install script
 Before starting Step 2, you **need to have a valid domain or subdomain** that you can use and that you own. You can use a dynamic DNS service as I did for this tutorial. You need to select the public IP of your newly create instance and update the IP address that will be used fo the name resolution. Ok, now you can really go to the next step!
 
-1. **Download the script:**
+1. **Run the script:**
    ```bash
-   git clone https://github.com/Blakkos/n8n-cloud-aws.git
-   cd n8n-cloud-aws
-2. **Modify the execute rights on the file:**
-   ```bash
-   chmod +x n8n_cloud_install.sh
-3. **Run the script:**
-   ```bash
-   ./n8n_cloud_install.sh
-4. Enter your **domain or subdomain name**. I have used a free dynamic DNS service for this test but you can use any other paid service. Once you've entered the domain or subdomain name, press **Enter** and the script will start running for a few minutes:
+   bash <(curl -sSL https://github.com/Blakkos/n8n-cloud-aws/raw/refs/heads/main/n8n_cloud_install.sh)
+2. Enter your **domain or subdomain name**. I have used a free dynamic DNS service for this test but you can use any other paid service. Once you've entered the domain or subdomain name, press **Enter** and the script will start running for a few minutes:
 
    ![n8n-6-1](https://github.com/user-attachments/assets/f0a40a6a-76b9-43fa-a4a0-c0714ead2107)
 
 
-5. Enter a **VALID email address**. You will be prompted to do so in order to start the registration process for your SSL certificate.
+3. Enter a **VALID email address**. You will be prompted to do so in order to start the registration process for your SSL certificate.
 
    ![n8n-7](https://github.com/user-attachments/assets/83b8cc10-a394-4188-baf7-6107bbe60863)
 
 
-6. You have to **accept** the terms and conditions to go to the next step.
+4. You have to **accept** the terms and conditions to go to the next step.
 
    ![n8n-8](https://github.com/user-attachments/assets/b8e33549-70e0-4db0-824e-8565338fc864)
 
 
-7. Answer this next question however you prefer.
+5. Answer this next question however you prefer.
    
    ![n8n-9](https://github.com/user-attachments/assets/24b0f04b-b62a-4a65-bf50-72243ab1f900)
 
 
-9. If everything went well, you should see something simmilar to this:
+6. If everything went well, you should see something simmilar to this:
 
    ![n8n-10](https://github.com/user-attachments/assets/a16babfd-a65f-4a13-8754-d02952be324a)
 
@@ -84,7 +77,7 @@ in that case, double check that you have entered the proper IP address and try l
    sudo certbot --nginx -d MyPlaceholder-DomainOrSubdomain.replaceme.net
 ```
 
-10. You can now open your browser and go to the URL of your n8n instance https://MyPlaceholder-DomainOrSubdomain.replaceme.net
+7. You can now open your browser and go to the URL of your n8n instance https://MyPlaceholder-DomainOrSubdomain.replaceme.net
    ![n8n-11](https://github.com/user-attachments/assets/35783028-11f0-4914-9bb5-785da10db09e)
 
     You can now enjoy your n8n instance!
@@ -103,25 +96,18 @@ After rebooting, you should have access to your instance. Make sure the public i
 I also created a script to update to the latest version of n8n whenever you see an update notification in the dashboard.
 This update script works if you are using docker and if you have attached a docker volume mapped to the /home/node/.n8n folder inside you n8n container.
 
-1. **Download the script:**
+1. **Run the script:**
    ```bash
-   git clone https://github.com/Blakkos/n8n-cloud-aws.git
-   cd n8n-cloud-aws
-2. **Modify the execute rights on the file:**
-   ```bash
-   chmod +x n8n_cloud_update.sh
-3. **Run the script:**
-   ```bash
-   ./n8n_cloud_update.sh
-4. Enter the name of your n8n container. To find it, you can exit with Ctrl+C and type "sudo docker ps". (If you used my install script, it will be "n8n".):
+   bash <(curl -sSL https://github.com/Blakkos/n8n-cloud-aws/raw/refs/heads/main/n8n_cloud_update.sh)
+2. Enter the name of your n8n container. To find it, you can exit with Ctrl+C and type "sudo docker ps". (If you used my install script, it will be "n8n".):
    ![n8n-12](https://github.com/user-attachments/assets/718bc97c-3fad-4b48-9320-12ccabcf0c93)
 
-5. Enter the name of the docker volume mapped to the /home/node/.n8n floder located inside the container. If you have used my install script, it should be "n8n_data". (:warning: IMPORTANT :warning: If you do not have that, please cancel this process with Ctrl+C):
+3. Enter the name of the docker volume mapped to the /home/node/.n8n floder located inside the container. If you have used my install script, it should be "n8n_data". (:warning: IMPORTANT :warning: If you do not have that, please cancel this process with Ctrl+C):
    ![n8n-13](https://github.com/user-attachments/assets/63571fa3-1424-4d0b-b18a-7051e00aec11)
 
-6. Enter your **domain or subdomain name**. This is the domain from the URL you use to access the n8n dashboard (without https://).Once you've entered the domain or subdomain name, press **Enter** and the script will start running for a few minutes:
+4. Enter your **domain or subdomain name**. This is the domain from the URL you use to access the n8n dashboard (without https://).Once you've entered the domain or subdomain name, press **Enter** and the script will start running for a few minutes:
    ![n8n-14](https://github.com/user-attachments/assets/d6ba7b0f-3708-4aa3-b398-cad4710f8110)
 
-7. Once the update process is over, you will find the backup files of your workflows and credentials in the user home folder. You can also access your n8n dashboard again but this time it will be up-to-date!
+5. Once the update process is over, you will find the backup files of your workflows and credentials in the user home folder. You can also access your n8n dashboard again but this time it will be up-to-date!
    
 **IN CASE OF AN ERROR:** If for some reason the container does not update or start and you need to restor something, a backup is created in the user's home folder. It will have a timestamp in the name and should look like this: n8n_bk_19Feb2025_204517UTC. This folder will contain everything you need to restore the data inside a fresh n8n container. The [official documentation](https://docs.n8n.io/hosting/cli-commands/#import-workflows-and-credentials) explains how to import workflows and credentials.
