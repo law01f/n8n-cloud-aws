@@ -2,7 +2,7 @@
 
 [n8n](https://n8n.io) is a very popular workflow automation platform that allows you to connect various services to automate processes using little to no code.
 It can be used with their subscription model or self-hosted locally or in the cloud.
-The benefit of having n8n self hosted comes not only from the fact that you don't have to pay the monthy fee but also that you won't be limited with the amount of active workflows.
+The benefit of having n8n self hosted comes not only from the fact that you don't have to pay the monthly fee but also that you won't be limited with the amount of active workflows.
 
 After trying various tutorials, I found a very good one from [futurminds' github](https://github.com/futurminds/n8n-self-hosting) and decided to create a script to try to make the installation process even easier.
 
@@ -10,7 +10,7 @@ These instructions were created for an AWS environment and require the use of a 
 
 ## What you will need:
 1. An AWS account. Feel free to use any other cloud VM service but this tutorial focuses on AWS EC2. If you are using another cloud VM service, you can skip to [**Step 2**](https://github.com/Blakkos/n8n-cloud-aws/tree/main#step-2-run-my-install-script) but keep in mind the script is tested on Ubuntu. It should work on other debian based systems but I leave it to you to try it. 
-2. DNS or dynamic DNS service for the domain or subdomain you will assign to the public IP of the VM. I have only tried this with Dynu and NoIP. I also tested with Duck DNS which i usually enjoy but I got a lot of DNS issues after the setup. Use whatever service you prefer, free or not.
+2. DNS or dynamic DNS service for the domain or subdomain you will assign to the public IP of the VM. I have only tried this with Dynu and NoIP. I also tested with Duck DNS which I usually enjoy but I got a lot of DNS issues after the setup. Use whatever service you prefer, free or not.
 
 ## Step 1: Create the Free Tier EC2 instance on AWS
 
@@ -22,7 +22,7 @@ These instructions were created for an AWS environment and require the use of a 
 
    ![n8n-2](https://github.com/user-attachments/assets/06600e61-c82b-4f60-aeee-c9c906053b50)
 
-3. For **Network settings**, you can create a new security group ou use an existing one depending on your security guidelines or policies. The most important is that you **allow HTTP and HTTPS traffic** as this is how your n8n instance will be accessible. Allow also **SSH traffic** to access your instance using command line interface. (I recommand for added security change "Anywhere" to "My IP" in order to restrict who could access your instance using SSH. I also recommand that you disable SSH traffic to your instance once you are done with the installation steps.)
+3. For **Network settings**, you can create a new security group ou use an existing one depending on your security guidelines or policies. The most important is that you **allow HTTP and HTTPS traffic** as this is how your n8n instance will be accessible. Allow also **SSH traffic** to access your instance using command line interface. (I recommend for added security change "Anywhere" to "My IP" in order to restrict who could access your instance using SSH. I also recommend that you disable SSH traffic to your instance once you are done with the installation steps.)
 
    ![n8n-3](https://github.com/user-attachments/assets/87566f4c-ed36-4f14-bfc4-6aa0a65704ae)
 
@@ -42,7 +42,7 @@ These instructions were created for an AWS environment and require the use of a 
 Now that your brand new virtual machine has been created, you can go to the next step!
 
 ## Step 2: Run my install script
-Before starting Step 2, you **need to have a valid domain or subdomain** that you can use and that you own. You can use a dynamic DNS service as I did for this tutorial. You need to select the public IP of your newly create instance and update the IP address that will be used fo the name resolution. Ok, now you can really go to the next step!
+Before starting Step 2, you **need to have a valid domain or subdomain** that you can use and that you own. You can use a dynamic DNS service as I did for this tutorial. You need to select the public IP of your newly create instance and update the IP address that will be used for the name resolution. Ok, now you can really go to the next step!
 
 1. **Run the script:**
    ```bash
@@ -67,7 +67,7 @@ Before starting Step 2, you **need to have a valid domain or subdomain** that yo
    ![n8n-9](https://github.com/user-attachments/assets/24b0f04b-b62a-4a65-bf50-72243ab1f900)
 
 
-6. If everything went well, you should see something simmilar to this:
+6. If everything went well, you should see something similar to this:
 
    ![n8n-10](https://github.com/user-attachments/assets/a16babfd-a65f-4a13-8754-d02952be324a)
 
@@ -90,7 +90,7 @@ Use this to reboot your instance:
    ```bash
    sudo reboot
 ```
-After rebooting, you should have access to your instance. Make sure the public ip address did not change. You can find it in the EC2 dashboard.
+After rebooting, you should have access to your instance. Make sure the public IP address did not change. You can find it in the EC2 dashboard.
 
 
 ## Step 3: Run my update script
@@ -104,7 +104,7 @@ This update script works if you are using docker and if you have attached a dock
 
    ![n8n-12](https://github.com/user-attachments/assets/718bc97c-3fad-4b48-9320-12ccabcf0c93)
 
-3. Enter the name of the docker volume mapped to the /home/node/.n8n floder located inside the container. If you have used my install script, it should be "n8n_data". (:warning: IMPORTANT :warning: If you do not have that, please cancel this process with Ctrl+C):
+3. Enter the name of the docker volume mapped to the /home/node/.n8n folder located inside the container. If you have used my install script, it should be "n8n_data". (:warning: IMPORTANT :warning: If you do not have that, please cancel this process with Ctrl+C):
 
    ![n8n-13](https://github.com/user-attachments/assets/63571fa3-1424-4d0b-b18a-7051e00aec11)
 
@@ -114,4 +114,4 @@ This update script works if you are using docker and if you have attached a dock
 
 5. Once the update process is over, you will find the backup files of your workflows and credentials in the user home folder. You can also access your n8n dashboard again but this time it will be up-to-date!
    
-**IN CASE OF AN ERROR:** If for some reason the container does not update or start and you need to restor something, a backup is created in the user's home folder. It will have a timestamp in the name and should look like this: n8n_bk_19Feb2025_204517UTC. This folder will contain everything you need to restore the data inside a fresh n8n container. The [official documentation](https://docs.n8n.io/hosting/cli-commands/#import-workflows-and-credentials) explains how to import workflows and credentials.
+**IN CASE OF AN ERROR:** If for some reason the container does not update or start and you need to restore something, a backup is created in the user's home folder. It will have a timestamp in the name and should look like this: n8n_bk_19Feb2025_204517UTC. This folder will contain everything you need to restore the data inside a fresh n8n container. The [official documentation](https://docs.n8n.io/hosting/cli-commands/#import-workflows-and-credentials) explains how to import workflows and credentials.
