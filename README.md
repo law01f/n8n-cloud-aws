@@ -115,3 +115,5 @@ This update script works if you are using docker and if you have attached a dock
 5. Once the update process is over, you will find the backup files of your workflows and credentials in the user home folder. You can also access your n8n dashboard again but this time it will be up-to-date!
    
 **IN CASE OF AN ERROR:** If for some reason the container does not update or start and you need to restore something, a backup is created in the user's home folder. It will have a timestamp in the name and should look like this: n8n_bk_19Feb2025_204517UTC. This folder will contain everything you need to restore the data inside a fresh n8n container. The [official documentation](https://docs.n8n.io/hosting/cli-commands/#import-workflows-and-credentials) explains how to import workflows and credentials.
+
+![](https://komarev.com/ghpvc/?username=Blakkos&color=blue)
