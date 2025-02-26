@@ -71,7 +71,7 @@ Before starting Step 2, you **need to have a valid domain or subdomain** that yo
 
    ![n8n-10](https://github.com/user-attachments/assets/a16babfd-a65f-4a13-8754-d02952be324a)
 
-**IN CASE OF AN ERROR:** If this last step gives you errors (as it did to me many times), you might have a DNS related issue. Sometimes it can take a few minutes or a few hours for the update of the IP address in your dynamic DNS service to take effect.
+⛔**IN CASE OF AN ERROR:**⛔ If this last step gives you errors (as it did to me many times), you might have a DNS related issue. Sometimes it can take a few minutes or a few hours for the update of the IP address in your dynamic DNS service to take effect.
 in that case, double check that you have entered the proper IP address and try later using this last command (replace the placeholder by your domain or subdomain name):
    ```bash
    sudo certbot --nginx -d MyPlaceholder-DomainOrSubdomain.replaceme.net
@@ -85,7 +85,7 @@ in that case, double check that you have entered the proper IP address and try l
 
 
     
-**IN CASE OF AN ERROR:** Your instance should be accessible as soon as the script finished running. In some cases, I have noticed that the URL was not accessible and I had to reboot the instance for everything to work properly.
+⛔**IN CASE OF AN ERROR:**⛔ Your instance should be accessible as soon as the script finished running. In some cases, I have noticed that the URL was not accessible and I had to reboot the instance for everything to work properly.
 Use this to reboot your instance:
    ```bash
    sudo reboot
@@ -104,7 +104,7 @@ This update script works if you are using docker and if you have attached a dock
 
    ![n8n-12](https://github.com/user-attachments/assets/718bc97c-3fad-4b48-9320-12ccabcf0c93)
 
-3. Enter the name of the docker volume mapped to the /home/node/.n8n folder located inside the container. If you have used my install script, it should be "n8n_data". (:warning: IMPORTANT :warning: If you do not have that, please cancel this process with Ctrl+C):
+3. Enter the name of the docker volume mapped to the /home/node/.n8n folder located inside the container. If you have used my install script, it should be "n8n_data". (⚠️ IMPORTANT ⚠️ If you do not have that, please cancel this process with Ctrl+C):
 
    ![n8n-13](https://github.com/user-attachments/assets/63571fa3-1424-4d0b-b18a-7051e00aec11)
 
@@ -114,6 +114,6 @@ This update script works if you are using docker and if you have attached a dock
 
 5. Once the update process is over, you will find the backup files of your workflows and credentials in the user home folder. You can also access your n8n dashboard again but this time it will be up-to-date!
    
-**IN CASE OF AN ERROR:** If for some reason the container does not update or start and you need to restore something, a backup is created in the user's home folder. It will have a timestamp in the name and should look like this: n8n_bk_19Feb2025_204517UTC. This folder will contain everything you need to restore the data inside a fresh n8n container. The [official documentation](https://docs.n8n.io/hosting/cli-commands/#import-workflows-and-credentials) explains how to import workflows and credentials.
+⛔**IN CASE OF AN ERROR:**⛔ If for some reason the container does not update or start and you need to restore something, a backup is created in the user's home folder. It will have a timestamp in the name and should look like this: n8n_bk_19Feb2025_204517UTC. This folder will contain everything you need to restore the data inside a fresh n8n container. The [official documentation](https://docs.n8n.io/hosting/cli-commands/#import-workflows-and-credentials) explains how to import workflows and credentials.
 
 ![](https://komarev.com/ghpvc/?username=Blakkos&color=blue)
