@@ -85,7 +85,7 @@ in that case, double check that you have entered the proper IP address and try l
 
 
     
-⛔**IN CASE OF AN ERROR:**⛔ Your instance should be accessible as soon as the script finished running. In some cases, I have noticed that the URL was not accessible and I had to reboot the instance for everything to work properly.
+**⛔IN CASE OF AN ERROR:⛔** Your instance should be accessible as soon as the script finished running. In some cases, I have noticed that the URL was not accessible and I had to reboot the instance for everything to work properly.
 Use this to reboot your instance:
    ```bash
    sudo reboot
