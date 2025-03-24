@@ -39,7 +39,7 @@ echo "Pulling the latest n8n image..."
 sudo docker pull n8nio/n8n:latest
 echo "The latest n8n image has been pulled!"
 echo "Now starting updated n8n container..."
-sudo docker run -d --restart unless-stopped -it --name n8n -p 5678:5678 -e N8N_HOST="$My_Domain_Or_Subdomain" -e WEBHOOK_TUNNEL_URL="https://$My_Domain_Or_Subdomain/" -e WEBHOOK_URL="https://$My_Domain_Or_Subdomain/" -v ~/.n8n:/root/.n8n -v ~/n8n-local-files:/files -v $My_n8n_volume:/home/node/.n8n n8nio/n8n:latest
+sudo docker run -d --restart unless-stopped -it --name n8n -p 5678:5678 -e N8N_HOST="$My_Domain_Or_Subdomain" -e WEBHOOK_TUNNEL_URL="https://$My_Domain_Or_Subdomain/" -e WEBHOOK_URL="https://$My_Domain_Or_Subdomain/" -e N8N_COMMUNITY_PACKAGES_ALLOW_TOOL_USAGE=true -v ~/.n8n:/root/.n8n -v ~/n8n-local-files:/files -v $My_n8n_volume:/home/node/.n8n n8nio/n8n:latest
 
 # Fin.
 echo -e "\n\n\n\n********************************************************************\n********************************************************************\n********************** JJ n8n update script ************************\n********************************************************************\n*********** https://github.com/Blakkos/n8n-cloud-aws ***************\n********************************************************************\n********************************************************************\n******************* n8n update process ended! **********************\n********************************************************************\n********************************************************************\n\nGo to https://$My_Domain_Or_Subdomain/ to access your n8n instance.\n\n\n"
