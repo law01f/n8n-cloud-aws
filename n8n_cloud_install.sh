@@ -16,7 +16,7 @@ echo -e "\n\n*******************************************************************
 
 # Starting the n8n instance with a docker volume called n8n_data pointing to the /home/node/.n8n folder inside the container. This folder contains all the data needed for n8n to stay persistent between upgrades.
 echo -e "\n\n********************************************************************\n********************* Starting n8n instance... *********************\n********************************************************************\n\n\n"
-sudo docker run -d --restart unless-stopped -it --name n8n -p 5678:5678 -e N8N_HOST="$My_Domain_Or_Subdomain" -e WEBHOOK_TUNNEL_URL="https://$My_Domain_Or_Subdomain/" -e WEBHOOK_URL="https://$My_Domain_Or_Subdomain/" -e N8N_COMMUNITY_PACKAGES_ALLOW_TOOL_USAGE=true -v ~/.n8n:/root/.n8n -v ~/n8n-local-files:/files -v n8n_data:/home/node/.n8n n8nio/n8n:latest
+sudo docker run -d --restart unless-stopped -it --name n8n -p 5678:5678 -e N8N_HOST="$My_Domain_Or_Subdomain" -e WEBHOOK_TUNNEL_URL="https://$My_Domain_Or_Subdomain/" -e WEBHOOK_URL="https://$My_Domain_Or_Subdomain/" -e N8N_COMMUNITY_PACKAGES_ALLOW_TOOL_USAGE=true -e N8N_PUSH_BACKEND=websocket -v ~/.n8n:/root/.n8n -v ~/n8n-local-files:/files -v n8n_data:/home/node/.n8n n8nio/n8n:latest
 echo -e "\n\n********************************************************************\n*********************** n8n instance started! **********************\n********************************************************************\n\n\n"
 
 # Installing nginx and Cerbot to allow SSL when connecting to the instance from anywhere.
