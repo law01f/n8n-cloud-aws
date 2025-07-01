@@ -22,7 +22,7 @@ echo -e "\n\n*******************************************************************
 # Installing nginx and Cerbot to allow SSL when connecting to the instance from anywhere.
 echo -e "\n\n********************************************************************\n************************ Installing nginx... ***********************\n********************************************************************\n\n\n"
 sudo apt install nginx -y
-sudo echo -e "server {\n    listen 80;\n    server_name $My_Domain_Or_Subdomain;\n\n    location / {\n        proxy_pass http://localhost:5678;\n        proxy_http_version 1.1;\n        chunked_transfer_encoding off;\n        proxy_buffering off;\n        proxy_cache off;\n        proxy_set_header Upgrade \$http_upgrade;\n        proxy_set_header Connection \"upgrade\";\n \n        proxy_set_header Host \$http_host;\n        proxy_set_header Origin \$scheme://$http_host;\n        proxy_buffering off;    }\n}" | sudo tee -a /etc/nginx/sites-available/n8n.conf > /dev/null
+sudo echo -e "server {\n    listen 80;\n    server_name $My_Domain_Or_Subdomain;\n\n    location / {\n        proxy_pass http://localhost:5678;\n        proxy_http_version 1.1;\n        chunked_transfer_encoding off;\n        proxy_buffering off;\n        proxy_cache off;\n        proxy_set_header Upgrade \$http_upgrade;\n        proxy_set_header Connection \"upgrade\";\n \n        proxy_set_header Host \$http_host;\n        proxy_set_header Origin \$scheme://$http_host;    }\n}" | sudo tee -a /etc/nginx/sites-available/n8n.conf > /dev/null
 sudo ln -s /etc/nginx/sites-available/n8n.conf /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl restart nginx
